@@ -1,0 +1,7 @@
+#include <stdio.h>
+
+int main(int argc, char** argv)
+{
+    printf("%d, %d\n", 'a' - 'A', 'A' - 'a');
+    return 0;
+}
