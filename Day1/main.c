@@ -1,5 +1,5 @@
-#include "stdio.h"
-int main(int argc, char **argv) {
-  printf("Hello There");
+#include <stdio.h>
+int main(void) {
+  printf("Hello There\n");
   return 0;
 }
