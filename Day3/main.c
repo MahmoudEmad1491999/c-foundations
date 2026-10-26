@@ -1,6 +1,10 @@
 #include <stdint.h>
 #include <stdio.h>
 int main(void) {
+  /* the zu is the explicit format specifier for the retured type of sizeof
+   * operator, on some machines size_t is expanded to unsigned int and on some
+   * other machines to unsinged long so using other specifier might trigger
+   * portablity issues.*/
   printf("char: %zu\n", sizeof(char));
   printf("short: %zu\n", sizeof(short));
   printf("int: %zu\n", sizeof(int));
@@ -12,11 +16,11 @@ int main(void) {
   printf("uint8_t: %zu\n", sizeof(uint8_t));
   printf("uint16_t: %zu\n", sizeof(uint16_t));
   printf("uint32_t: %zu\n", sizeof(uint32_t));
-  printf("int8_t: %zu\n", sizeof(uint8_t));
-  printf("int16_t: %zu\n", sizeof(uint16_t));
-  printf("int32_t: %zu\n", sizeof(uint32_t));
+  printf("int8_t: %zu\n", sizeof(int8_t));
+  printf("int16_t: %zu\n", sizeof(int16_t));
+  printf("int32_t: %zu\n", sizeof(int32_t));
   printf("void*: %zu\n", sizeof(void *));
   printf("uint64_t: %zu\n", sizeof(uint64_t));
-  printf("int64_t: %zu\n", sizeof(uint64_t));
+  printf("int64_t: %zu\n", sizeof(int64_t));
   return 0;
 }
